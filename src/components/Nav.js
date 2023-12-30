@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import TripsList from "./TripsList";
 function Nav() {
   return (
     <nav
@@ -21,7 +22,7 @@ function Nav() {
             <li className="nav-item mx-0 mx-lg-1">
               <NavLink
                 className="nav-link py-3 px-0 px-lg-3 rounded"
-                to="/tripslist"
+                to="/triplist"
               >
                 Trips
               </NavLink>

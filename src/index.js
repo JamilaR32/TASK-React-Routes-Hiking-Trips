@@ -6,6 +6,9 @@ import TripsList from "./components/TripsList";
 import Home from "./components/Home";
 import "./App.css";
 import Nav from "./components/Nav";
+import TripDetail from "./components/TripDetail";
+import App from "./App";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,8 +19,9 @@ const router = createBrowserRouter([
       </div>
     ),
   },
+
   {
-    path: "/tripslist",
+    path: "/triplist",
     element: (
       <div>
         <Nav />
@@ -25,10 +29,20 @@ const router = createBrowserRouter([
       </div>
     ),
   },
+  {
+    path: "/tripdetail/:tripId",
+    element: (
+      <div>
+        <Nav />
+        <TripDetail />
+      </div>
+    ),
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <App />
     <RouterProvider router={router} />
   </React.StrictMode>
 );

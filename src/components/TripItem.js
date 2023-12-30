@@ -1,4 +1,6 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
+import TripDetail from "./TripDetail";
 
 function TripItem({ trip }) {
   return (
@@ -13,6 +15,7 @@ function TripItem({ trip }) {
             <i className="fas fa-plus fa-3x"></i>
           </div>
         </div>
+
         <img className="img-fluid" src={trip.img} alt="..." />
       </div>
     </div>
